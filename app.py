@@ -21,11 +21,11 @@ with st.sidebar:
         else:
             st.write('Welcome! I am glad to know that you are ', age, 'years old! :sunglasses:')
             
-        gender = st.radio('Which is your gender?', ("Male", "Female", "Other", "I do not want to specificate")
-        #if gender == "Other":
+        gender = st.radio("Male", "Female", "Other", "I do not want to specificate")
+        if gender == "Other":
             other = st.text_input('Write here in what you identify! I will always accept you whatever you are :kiss:')
             st.write('I am glad to know that you identify as: ', other)
-        if gender == "I do not want to specificate":
+        elif gender == "I do not want to specificate":
             st.write('Do not worry! I will understand!')
         else:
             st.write('So you are a ', gender, 'ok!')
