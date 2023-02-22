@@ -32,7 +32,7 @@ def calculate_result(answers):
     else:
         return "Sei una persona ambiziosa e determinata."
     
-    def main():
+def main():
     st.title("Test della Personalità per Bambini")
     st.write("Rispondi alle seguenti domande per scoprire qual è la tua personalità!")
     
@@ -50,6 +50,7 @@ def calculate_result(answers):
     if "result" in st.session_state:
         st.title("Risultato del Test della Personalità per Bambini")
         result = st.session_state["result"]
+        st.balloons()
         st.write("Il tuo risultato è:", result)
 
 if __name__ == "__main__":
