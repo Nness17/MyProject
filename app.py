@@ -1,29 +1,53 @@
 import streamlit as st
-import random
 
-def generate_random_number():
-    return random.randint(1, 10)
+questions = [
+    "Sei felice quando sei con i tuoi amici?",
+    "Hai paura dei cani?",
+    "Ti piace leggere libri?",
+    "Sei bravo/a a fare amicizia?",
+    "Ti piace fare sport?",
+    "Ti piace la musica?",
+    "Hai mai viaggiato in un altro paese?",
+    "Ti piace la scuola?",
+    "Hai un animale domestico?",
+    "Hai un sogno nel cassetto?",
+]
 
-def guess_number():
-    st.write("Indovina un numero tra 1 e 10")
-    random_number = generate_random_number()
-    guess = st.text_input("Inserisci il tuo tentativo")
+def show_questions():
+    answers = []
     
-    if guess:
-        guess = int(guess)
-        if guess == random_number:
-            st.write("Congratulazioni, hai indovinato!")
-        else:
-            st.write("Mi dispiace, il numero era", random_number)
+    for question in questions:
+        answer = st.radio(question, ("Sì", "No"))
+        answers.append(answer)
+    
+    return answers
 
+def calculate_result(answers):
+    score = 0
+    
+    for answer in answers:
+        if answer == "Sì":
+            score += 1
+    
+    if score <= 3:
+        return "Sei una persona timida, ma gentile e dolce."
+    elif score <= 7:
+        return "Sei una persona estroversa e socievole."
+    else:
+        return "Sei una persona ambiziosa e determinata."
 
-def main():
-    st.title("Guess the Number")
-    guess_number()
+    def main():
+    st.title("Test della Personalità per Bambini")
+    st.write("Rispondi alle seguenti domande per scoprire qual è la tua personalità!")
+    
+    answers = show_questions()
+    
+    if st.button("Mostra il risultato"):
+        result = calculate_result(answers)
+        st.write("Il tuo risultato è:", result)
     
 if __name__ == "__main__":
     main()
-
 
 
 
