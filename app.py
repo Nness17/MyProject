@@ -9,6 +9,7 @@ questions = [
 ]
 
 with st.sidebar:
+    st.title("Welcome to my personality test! :smile:")
     valueof = st.slider ('Hi!, How old are you?',
     0, 100)
     if st.button('SUBMIT'):
