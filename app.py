@@ -41,13 +41,9 @@ def main():
         layout="wide",
     )
     
-    answers = []
-    for i, question in enumerate(questions):
-        st.write("Domanda", i + 1)
-        answer = show_question(i)
-        answers.append(answer)
-   
-     if st.button("Mostra il risultato"):
+    answers = show_questions()
+    
+if st.button("Mostra il risultato"):
         result = calculate_result(answers)
         st.write("Il tuo risultato è:", result)
         st.balloons()
