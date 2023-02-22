@@ -51,6 +51,7 @@ def main():
     if "result" in st.session_state:
         st.title("Risultato del Test della Personalità per Bambini")
         result = st.session_state["result"]
+        st.balloons()
         st.write("Il tuo risultato è:", result)
 
 if __name__ == "__main__":
