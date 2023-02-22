@@ -50,10 +50,8 @@ def main():
         st.session_state["result"] = result
         st.experimental_rerun()
 
-    if "result" in st.session_state:
-        st.title("Risultato del Test della Personalità per Bambini")
-        result = st.session_state["result"]
-        st.image("https://i.imgur.com/WbGTrtF.png", use_column_width=True)
+     if st.button("Mostra il risultato"):
+        result = calculate_result(answers)
         st.write("Il tuo risultato è:", result)
         st.balloons()
 
