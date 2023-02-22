@@ -44,12 +44,7 @@ def main():
         st.write("Domanda", i + 1)
         answer = show_question(i)
         answers.append(answer)
-    
-    if st.button("Mostra il risultato"):
-        result = calculate_result(answers)
-        st.session_state["result"] = result
-        st.experimental_rerun()
-
+   
      if st.button("Mostra il risultato"):
         result = calculate_result(answers)
         st.write("Il tuo risultato è:", result)
