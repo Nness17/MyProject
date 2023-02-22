@@ -2,15 +2,10 @@ import streamlit as st
 
 questions = [
     "Do you like listening to music?",
-    "Hai paura dei cani?",
-    "Ti piace leggere libri?",
-    "Sei bravo/a a fare amicizia?",
-    "Ti piace fare sport?",
-    "Ti piace la musica?",
-    "Hai mai viaggiato in un altro paese?",
-    "Ti piace la scuola?",
-    "Hai un animale domestico?",
-    "Hai un sogno nel cassetto?",
+    "Do you like doing sports?",
+    "Do you like reading?",
+    "Do you like playing videogames?",
+    "Do you like listening to music?",
 ]
 
 with st.sidebar:
@@ -24,8 +19,13 @@ def show_questions():
     
     for question in questions:
         answer = st.radio(question, ("Sì", "No"))
+        if question == 5:
+            if answer == "Yes":
+                st.text("What kind of music do you like"?)
+                song = st.radio(("Rap", "Hip-Hop", "Classic", "Rock"))
+                if song == "Rap":
+                    st.video("https://www.youtube.com/results?search_query=veleno+7")
         answers.append(answer)
-    
     return answers
 
 def calculate_result(answers):
