@@ -33,6 +33,7 @@ def calculate_result(answers):
         return "Sei una persona ambiziosa e determinata."
     
 def main():
+    # Imposta lo sfondo personalizzato
     st.set_page_config(page_title="Test della Personalità per Bambini", page_icon=":smiley:", layout="wide", page_bg_image="https://i.imgur.com/yZuMAG6.jpg")
     
     st.title("Test della Personalità per Bambini")
@@ -52,7 +53,6 @@ def main():
     if "result" in st.session_state:
         st.title("Risultato del Test della Personalità per Bambini")
         result = st.session_state["result"]
-        st.balloons()
         st.write("Il tuo risultato è:", result)
 
 if __name__ == "__main__":
