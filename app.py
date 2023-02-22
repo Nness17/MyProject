@@ -32,12 +32,16 @@ def calculate_result(answers):
     else:
         return "Sei una persona ambiziosa e determinata."
     
+PAGE_BG_IMG = "https://th.bing.com/th/id/R.b729d4a5cd253ee7c0207dad3f6330f7?rik=PUpjkGSIZa81vw&pid=ImgRaw&r=0"
+RESULT_BG_IMG = "https://th.bing.com/th/id/R.b729d4a5cd253ee7c0207dad3f6330f7?rik=PUpjkGSIZa81vw&pid=ImgRaw&r=0"
+
 def main():
-    # Imposta lo sfondo personalizzato
-    #st.set_page_config(page_title="Test della Personalità per Bambini", page_icon=":smiley:", layout="wide", page_bg_image="https://th.bing.com/th/id/R.4f9864eb5ea2dc0d59a0ad7bbfd7a8be?rik=NLIMA2E3itHFgQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f-WD77vgy7NQo%2fU6EqBvM7K_I%2fAAAAAAAAGVs%2fa9Lw9zv8qRQ%2fs1600%2f10492607_1495485737349775_2397954031421573263_n.jpg&ehk=%2bBo3yyfqgiOhLOQpEa8r6qJI7d1SMFLg%2fDpWj%2fZfOjU%3d&risl=&pid=ImgRaw&r=0")
-    
-    st.title("Test della Personalità per Bambini")
-    st.write("Rispondi alle seguenti domande per scoprire qual è la tua personalità!")
+    st.set_page_config(
+        page_title="Test della Personalità per Bambini",
+        page_icon=":smiley:",
+        layout="wide",
+        page_bg_image=PAGE_BG_IMG
+    )
     
     answers = []
     for i, question in enumerate(questions):
@@ -55,6 +59,7 @@ def main():
         result = st.session_state["result"]
         st.image("https://i.imgur.com/WbGTrtF.png", use_column_width=True)
         st.write("Il tuo risultato è:", result)
+        st.balloons()
 
 if __name__ == "__main__":
     main()
