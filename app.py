@@ -22,7 +22,7 @@ with st.sidebar:
             st.write('Welcome! I am glad to know that you are ', age, 'years old! :sunglasses:')
             
         gender = st.radio('Which is your gender?', ("Male", "Female", "Other", "I do not want to specificate")
-        if gender is "Other":
+        #if gender == "Other":
             other = st.text_input('Write here in what you identify! I will always accept you whatever you are :kiss:')
             st.write('I am glad to know that you identify as: ', other)
         if gender == "I do not want to specificate":
