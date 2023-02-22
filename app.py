@@ -13,8 +13,11 @@ with st.sidebar:
     valueof = st.slider ('Hi!, How old are you?',
     0, 100)
     if st.button('SUBMIT'):
-        if valueof == 100 or valueof<=9:
-            st.write('Are you sure that this is your age? :new_moon_with_face:')
+        if valueof >=90 or valueof<=9:
+            st.write('Are you sure that this is your age? :bust_in_silhouette:')
+            st.button('You do not believe me? /:v')
+            st.write('OkOk I believe you, keep calm I still love you :hug:')
+            st.write('Welcome! I am glad to know that you are ', valueof, 'years old! :sunglasses:')
         else:
             st.write('Welcome! I am glad to know that you are ', valueof, 'years old! :sunglasses:')
     
