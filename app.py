@@ -21,7 +21,7 @@ def show_questions():
         answer = st.radio(question, ("Sì", "No"))
         if question == 5:
             if answer == "Yes":
-                st.text("What kind of music do you like"?)
+                st.text("What kind of music do you like?")
                 song = st.radio(("Rap", "Hip-Hop", "Classic", "Rock"))
                 if song == "Rap":
                     st.video("https://www.youtube.com/results?search_query=veleno+7")
