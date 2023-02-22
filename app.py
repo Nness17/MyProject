@@ -31,7 +31,6 @@ with st.sidebar:
         st.write('Do not worry! I will understand!')
     else:
         st.write('So you are a ', gender, 'ok!')
-with st.sidebar:
     st.title("Lets start the test!!! :boy: :girl:")
                           
     
