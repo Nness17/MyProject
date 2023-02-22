@@ -15,7 +15,7 @@ with st.sidebar:
     if st.button('SUBMIT'):
         if valueof >=90 or valueof<=9:
             st.write('Are you sure that this is your age? :bust_in_silhouette:')
-            if st.button('You do not believe me? :eyes:'):
+            if st.button('You do not believe me? '):
                 st.write('OkOk I believe you, keep calm I still love you :kiss:')
                 st.write('Welcome! I am glad to know that you are ', valueof, 'years old! :sunglasses:')
         else:
