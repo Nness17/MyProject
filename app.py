@@ -13,12 +13,14 @@ questions = [
     "Hai un sogno nel cassetto?",
 ]
 
-def show_question(index):
-    question = questions[index]
-    answer = st.radio(question, ("Sì", "No"))
-    if index == 1:
-        st.text("REALLY? :sad_face:")
-    return answer
+def show_questions():
+    answers = []
+    
+    for question in questions:
+        answer = st.radio(question, ("Sì", "No"))
+        answers.append(answer)
+    
+    return answers
 
 def calculate_result(answers):
     score = 0
