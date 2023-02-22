@@ -10,8 +10,10 @@ questions = [
 
 with st.sidebar:
     add_radio = st.radio(
-        "Choose a shipping method",
-        ("Standard (5-15 days)", "Express (2-5 days)")
+        "Insert your age :smile_face:",
+        (st.slider ('Select a range of values',
+    0.0, 100.0, (25.0, 75.0))
+)
     )
     
 def show_questions():
