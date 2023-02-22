@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image
 
 questions = [
     "Do you like listening to music?",
@@ -35,7 +36,8 @@ with st.sidebar:
         st.write('So you are a ', gender, 'ok!')
         st.title("Lets start the test!!! :boy: :girl:")
     
-                          
+with st.sidebar:
+    image = Image.open('sunrise.jpg')
     
 def show_questions():
     answers = []
