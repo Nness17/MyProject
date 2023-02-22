@@ -32,7 +32,7 @@ def calculate_result(answers):
     else:
         return "Sei una persona ambiziosa e determinata."
     
-PAGE_BG_IMG = "https://th.bing.com/th/id/R.b729d4a5cd253ee7c0207dad3f6330f7?rik=PUpjkGSIZa81vw&pid=ImgRaw&r=0"
+PAGE_BG_IMG = "https://www.google.es/url?sa=i&url=https%3A%2F%2Fwww.giochibambiniragazzi.it%2Fdisegni-da-colorare-e-stampare-per-bambini%2Fpersonaggi%2Farcobaleno-disegni-da-colorare-e-stampare-per-bambini%2F&psig=AOvVaw0wXQmouWK46-QTuLxVa84S&ust=1677147680416000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNilspL0qP0CFQAAAAAdAAAAABAH"
 RESULT_BG_IMG = "https://th.bing.com/th/id/R.b729d4a5cd253ee7c0207dad3f6330f7?rik=PUpjkGSIZa81vw&pid=ImgRaw&r=0"
 
 def main():
