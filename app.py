@@ -9,10 +9,8 @@ questions = [
 ]
 
 with st.sidebar:
-    add_radio = st.radio(
-        "Insert your age :smile_face:",
-        (st.slider ('Select a range of values',
-    0.0, 100.0, (25.0, 75.0))
+        (st.slider ('Hi!, How old are you?',
+    0.0, 100.0)
 )
     )
     
