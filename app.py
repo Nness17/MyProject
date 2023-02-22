@@ -1,7 +1,7 @@
 import streamlit as st
 
 questions = [
-    "Sei felice quando sei con i tuoi amici?",
+    "Do you like listening to music?",
     "Hai paura dei cani?",
     "Ti piace leggere libri?",
     "Sei bravo/a a fare amicizia?",
@@ -16,6 +16,8 @@ questions = [
 def show_question(index):
     question = questions[index]
     answer = st.radio(question, ("Sì", "No"))
+    if index == 1:
+        st.text("REALLY? :sad_face:")
     return answer
 
 def calculate_result(answers):
