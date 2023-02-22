@@ -27,11 +27,14 @@ with st.sidebar:
     if gender == 'Other':
         other = st.text_input('Write here in what you identify! I will always accept you whatever you are :kiss:')
         st.write('I am glad to know that you identify as: ', other)
+        st.title("Lets start the test!!! :boy: :girl:")
     elif gender == 'I do not want to specificate':
         st.write('Do not worry! I will understand!')
+        st.title("Lets start the test!!! :boy: :girl:")
     else:
         st.write('So you are a ', gender, 'ok!')
-    st.title("Lets start the test!!! :boy: :girl:")
+        st.title("Lets start the test!!! :boy: :girl:")
+    
                           
     
 def show_questions():
