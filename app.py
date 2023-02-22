@@ -36,7 +36,7 @@ def calculate_result(answers):
     else:
         return "Sei una persona ambiziosa e determinata."
 
-    def main():
+def main():
     st.title("Test della Personalità per Bambini")
     st.write("Rispondi alle seguenti domande per scoprire qual è la tua personalità!")
     
