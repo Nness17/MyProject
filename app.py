@@ -33,6 +33,8 @@ def calculate_result(answers):
         return "Sei una persona ambiziosa e determinata."
     
 def main():
+    st.set_page_config(page_title="Test della Personalità per Bambini", page_icon=":smiley:", layout="wide", page_bg_image="https://i.imgur.com/yZuMAG6.jpg")
+    
     st.title("Test della Personalità per Bambini")
     st.write("Rispondi alle seguenti domande per scoprire qual è la tua personalità!")
     
