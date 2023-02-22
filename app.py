@@ -9,8 +9,10 @@ questions = [
 ]
 
 with st.sidebar:
-    st.slider ('Hi!, How old are you?',
+    valueof = st.slider ('Hi!, How old are you?',
     0, 100)
+    if st.button('SUBMIT'):
+        st.write('Welcome! I am glad to know that you are ', valueof, 'years old!)
     
 def show_questions():
     answers = []
