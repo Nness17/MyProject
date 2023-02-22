@@ -27,10 +27,8 @@ with st.sidebar:
     if gender == 'Other':
         other = st.text_input('Write here in what you identify! I will always accept you whatever you are :kiss:')
         st.write('I am glad to know that you identify as: ', other)
-        st.title("Lets start the test!!! :boy: :girl:")
     elif gender == 'I do not want to specificate':
         st.write('Do not worry! I will understand!')
-        st.title("Lets start the test!!! :boy: :girl:")
     else:
         st.write('So you are a ', gender, 'ok!')
         st.title("Lets start the test!!! :boy: :girl:")
@@ -66,14 +64,14 @@ def calculate_result(answers):
         return "Sei una persona ambiziosa e determinata."
     
 def main():
-    st.title("Test della Personalità per Bambini")
-    st.write("Rispondi alle seguenti domande per scoprire qual è la tua personalità!")
+    st.title("What kind of hero are you?")
+    st.write("Answer to the questions and discover which hero are you!")
     
     answers = show_questions()
     
-    if st.button("Mostra il risultato"):
+    if st.button("Lemme see which hero am I!"):
         result = calculate_result(answers)
-        st.write("Il tuo risultato è:", result)
+        st.write("And you areee: ", result)
         st.balloons()
     
 if __name__ == "__main__":
