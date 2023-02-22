@@ -12,7 +12,7 @@ with st.sidebar:
     valueof = st.slider ('Hi!, How old are you?',
     0, 100)
     if st.button('SUBMIT'):
-        st.write('Welcome! I am glad to know that you are ', valueof, 'years old!')
+        st.write('Welcome! I am glad to know that you are ', valueof, 'years old! :sunglasses:')
     
 def show_questions():
     answers = []
