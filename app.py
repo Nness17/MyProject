@@ -81,30 +81,32 @@ if __name__ == "__main__":
     
 
 with st.sidebar:
-    st.title("Welcome to the 'Which hero are you' test! :smile:")
-    age = st.slider ('Hi!, How old are you?',
-    0, 100)
-    if st.button('SUBMIT'):
-        if age >=90 or age<=9:
-            st.write('Are you sure that this is your age? :bust_in_silhouette:')
-            if st.button('You do not believe me? :eyes:'):
-                st.write('OkOk I believe you, keep calm I still love you :kiss: ')
+    with st.container:
+        st.title("Welcome to the 'Which hero are you' test! :smile:")
+        age = st.slider ('Hi!, How old are you?',
+        0, 100)
+        if st.button('SUBMIT'):
+            if age >=90 or age<=9:
+                st.write('Are you sure that this is your age? :bust_in_silhouette:')
+                if st.button('You do not believe me? :eyes:'):
+                    st.write('OkOk I believe you, keep calm I still love you :kiss: ')
+                    st.write('Welcome! I am glad to know that you are ', age, 'years old! :sunglasses:')
+            else:
                 st.write('Welcome! I am glad to know that you are ', age, 'years old! :sunglasses:')
-        else:
-            st.write('Welcome! I am glad to know that you are ', age, 'years old! :sunglasses:')
             
             
 with st.sidebar:
-    gender = st.radio("What is your gender?", ('Male', 'Female', 'Other', 'I do not want to specificate'))
-    if gender == 'Other':
-        other = st.text_input('Write here in what you identify! I will always accept you whatever you are :kiss:')
-        st.write('I am glad to know that you identify as: ', other)
-        st.title("Lets start the test!!! :boy: :girl:")
-    elif gender == 'I do not want to specificate':
-        st.write('Do not worry! I will understand!')
-        st.title("Lets start the test!!! :boy: :girl:")
-    else:
-        st.write('So you are a ', gender, 'ok!')
-        st.title("Lets start the test!!! :boy: :girl:")
+    with st.container:
+        gender = st.radio("What is your gender?", ('Male', 'Female', 'Other', 'I do not want to specificate'))
+        if gender == 'Other':
+            other = st.text_input('Write here in what you identify! I will always accept you whatever you are :kiss:')
+            st.write('I am glad to know that you identify as: ', other)
+            st.title("Lets start the test!!! :boy: :girl:")
+        elif gender == 'I do not want to specificate':
+            st.write('Do not worry! I will understand!')
+            st.title("Lets start the test!!! :boy: :girl:")
+        else:
+            st.write('So you are a ', gender, 'ok!')
+            st.title("Lets start the test!!! :boy: :girl:")
         
    
