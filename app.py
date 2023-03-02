@@ -13,7 +13,10 @@ questions = [
     {
         "question": "Which is your favourite superpower?",
         "options": ["Ssper strenght", "Flight", "Invisibility", "Teleporting"]
-    }
+    },
+    {
+        "question": "Where do you want to be?",
+        "options": ["In the magic reign of magma", "In the ice galaxy", "In a small cubic planet", "In an infinity spaceship"]
 ]
 
 # definiamo una lista di possibili eroi e i loro risultati associati
