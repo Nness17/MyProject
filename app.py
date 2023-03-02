@@ -1,38 +1,59 @@
 import streamlit as st
 
-def quiz():
+# Define the questions for the quiz
+questions = [
+    {
+        'question': 'What is your favorite color?',
+        'answers': {
+            'Red': 'Iron Man',
+            'Blue': 'Captain America',
+            'Green': 'Hulk',
+            'Yellow': 'Thor',
+            'Purple': 'Black Widow'
+        }
+    },
+    {
+        'question': 'What is your favorite food?',
+        'answers': {
+            'Pizza': 'Spider-Man',
+            'Tacos': 'Deadpool',
+            'Sushi': 'Wolverine',
+            'Burgers': 'The Hulk',
+            'Pasta': 'Doctor Strange'
+        }
+    },
+    {
+        'question': 'What is your favorite hobby?',
+        'answers': {
+            'Reading': 'Batman',
+            'Gaming': 'Iron Man',
+            'Sports': 'Captain America',
+            'Traveling': 'Thor',
+            'Watching movies': 'Black Panther'
+        }
+    }
+]
+
+# Define the function to run the quiz
+def run_quiz():
     st.title("Which hero are you?")
-    st.write("Answer to the following questions to discover it!")
-
-    # Qu1
-    st.header("Question 1")
-    q1 = st.radio("Which weapon do you prefer?", ("Bow", "Sword", "Hammer", "Gun"))
+    st.write("Answer a few questions to find out which hero you are!")
     
-    # Qu2
-    st.header("Question 2")
-    q2 = st.radio("Which is your favourite superpower?", ("Unlimited Power", "Flying", "Invisibility", "Telecinesis"))
-
-    # Qu3
-    st.header("Question 3")
-    q3 = st.radio("Which battle animal do you prefer?", ("A lion with 3 heads", "A super bird that throws fireballs", "An immortal bear with his super shield", "A giant snake that kills whoever he bites"))
- 
-    result = ""
-    if q1 == "Arco" and q2 == "Invisibilità" and q3 == "Falco":
-        result = "sei l'eroe Freccia Verde!"
-    elif q1 == "Spada" and q2 == "Forza sovrumana" and q3 == "Leone":
-        result = "sei l'eroe Spada di Fuoco!"
-    elif q1 == "Martello" and q2 == "Telecinesi" and q3 == "Orso":
-        result = "sei l'eroe Martello Telecinetico!"
-    elif q1 == "Pistola" and q2 == "Volare" and q3 == "Serpente":
-        result = "sei l'eroe Pistola Alata!"
-    else:
-        result = "mi dispiace, non riesco a identificare quale eroe sei."
-
-    # Visualizzazione del risultato
-    st.header("Risultato")
-    st.write(result)
-    quiz()
+    # Loop through each question and display the answer options
+    for i, question in enumerate(questions):
+        st.subheader(f"Question {i+1}")
+        st.write(question['question'])
+        answer_options = list(question['answers'].keys())
+        answer = st.radio("", answer_options)
+        
+        # Save the selected answer
+        selected_answer = question['answers'][answer]
+        
+    # Display the final result
+    st.subheader("Result")
+    st.write(f"You are {selected_answer}!")
     
+
 with st.sidebar:
     st.title("Welcome to the 'Which hero are you' test! :smile:")
     age = st.slider ('Hi!, How old are you?',
@@ -62,4 +83,5 @@ with st.sidebar:
         
    
 
-
+# Run the quiz
+run_quiz()
