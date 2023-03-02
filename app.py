@@ -45,8 +45,8 @@ def calculate_result(answers):
 
 # definiamo l'app Streamlit
 def main():
-    st.title("Quale eroe sei?")
-    st.write("Rispondi alle seguenti domande per scoprire quale eroe sei!")
+    st.title("Which hero are you?")
+    st.write("Answer to the following questions and discover it :sunglasses:")
     st.write(" ")
 
     # inizializziamo una lista vuota per le risposte
@@ -54,7 +54,7 @@ def main():
 
     # cicliamo attraverso tutte le domande e le opzioni
     for i, question in enumerate(questions):
-        st.write(f"Domanda {i + 1}: {question['question']}")
+        st.write(f"{question['question']}")
         # aggiungiamo un menu a tendina per le opzioni
         answer = st.selectbox("Scegli una risposta:", question["options"])
         # aggiungiamo la risposta alla lista delle risposte
