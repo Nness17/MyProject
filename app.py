@@ -18,18 +18,30 @@ questions = [
 
 # definiamo una lista di possibili eroi e i loro risultati associati
 heroes = {
-    "Batman": ["Blu", "Martello", "Invisibilità"],
-    "Superman": ["Rosso", "Volo", "Superforza"],
-    "Wonder Woman": ["Rosso", "Lancia", "Superforza"],
-    "Flash": ["Giallo", "Nessuna", "Velocezza"],
+    "Batman": {
+        "criteria": ["Blu", "Martello", "Invisibilità"],
+        "image": "https://example.com/batman.jpg"
+    },
+    "Superman": {
+        "criteria": ["Rosso", "Volo", "Superforza"],
+        "image": "https://example.com/superman.jpg"
+    },
+    "Wonder Woman": {
+        "criteria": ["Rosso", "Lancia", "Superforza"],
+        "image": "https://example.com/wonder-woman.jpg"
+    },
+    "Flash": {
+        "criteria": ["Giallo", "Nessuna", "Velocezza"],
+        "image": "https://example.com/flash.jpg"
+    }
 }
 
 # definiamo la funzione per calcolare il risultato in base alle risposte date
 def calculate_result(answers):
-    for hero, criteria in heroes.items():
-        if all(answer in criteria for answer in answers):
-            return hero
-    return "Nessun eroe corrisponde alle tue risposte."
+    for hero, data in heroes.items():
+        if all(answer in data["criteria"] for answer in answers):
+            return hero, data["image"]
+    return None, None
 
 # definiamo l'app Streamlit
 def main():
@@ -50,11 +62,15 @@ def main():
         st.write(" ")
 
     # calcoliamo il risultato in base alle risposte date
-    result = calculate_result(answers)
+    result, image_url = calculate_result(answers)
 
     # mostriamo il risultato all'utente
-    st.write(f"Sei... {result}!")
-    st.write(" ")
+    if result:
+        st.write(f"Sei... {result}!")
+        st.write(" ")
+        st.image(image_url, caption=result, use_column_width=True)
+    else:
+        st.write("Nessun eroe corrisponde alle tue risposte.")
 
 if __name__ == "__main__":
     main()
