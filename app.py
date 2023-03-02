@@ -1,56 +1,63 @@
 import streamlit as st
 
-# Define the questions for the quiz
+# definiamo una lista di domande e risposte
 questions = [
     {
-        'question': 'Which is your favourite weapon?',
-        'answers': {
-            'A fire sword': 'Iron Man',
-            'An hammer with lightnings': 'Captain America',
-            'A magic bow': 'Hulk',
-            'A machine-gun':,
-        }
+        "question": "Qual è il tuo colore preferito?",
+        "options": ["Rosso", "Blu", "Verde", "Giallo"]
     },
     {
-        'question': 'What is your favorite food?',
-        'answers': {
-            'Pizza': 'Spider-Man',
-            'Tacos': 'Deadpool',
-            'Sushi': 'Wolverine',
-            'Burgers': 'The Hulk',
-            'Pasta': 'Doctor Strange'
-        }
+        "question": "Qual è la tua arma preferita?",
+        "options": ["Spada", "Arco e Frecce", "Martello", "Lancia"]
     },
     {
-        'question': 'What is your favorite hobby?',
-        'answers': {
-            'Reading': 'Batman',
-            'Gaming': 'Iron Man',
-            'Sports': 'Captain America',
-            'Traveling': 'Thor',
-            'Watching movies': 'Black Panther'
-        }
+        "question": "Qual è il tuo superpotere preferito?",
+        "options": ["Superforza", "Volo", "Invisibilità", "Teletrasporto"]
     }
 ]
 
-# Define the function to run the quiz
-def run_quiz():
-    st.title("Which hero are you?")
-    st.write("Answer a few questions to find out which hero you are!")
-    
-    # Loop through each question and display the answer options
+# definiamo una lista di possibili eroi e i loro risultati associati
+heroes = {
+    "Batman": ["Blu", "Martello", "Invisibilità"],
+    "Superman": ["Rosso", "Volo", "Superforza"],
+    "Wonder Woman": ["Rosso", "Lancia", "Superforza"],
+    "Flash": ["Giallo", "Nessuna", "Velocezza"],
+}
+
+# definiamo la funzione per calcolare il risultato in base alle risposte date
+def calculate_result(answers):
+    for hero, criteria in heroes.items():
+        if all(answer in criteria for answer in answers):
+            return hero
+    return "Nessun eroe corrisponde alle tue risposte."
+
+# definiamo l'app Streamlit
+def main():
+    st.title("Quale eroe sei?")
+    st.write("Rispondi alle seguenti domande per scoprire quale eroe sei!")
+    st.write(" ")
+
+    # inizializziamo una lista vuota per le risposte
+    answers = []
+
+    # cicliamo attraverso tutte le domande e le opzioni
     for i, question in enumerate(questions):
-        st.subheader(f"Question {i+1}")
-        st.write(question['question'])
-        answer_options = list(question['answers'].keys())
-        answer = st.radio("", answer_options)
-        
-        # Save the selected answer
-        selected_answer = question['answers'][answer]
-        
-    # Display the final result
-    st.subheader("Result")
-    st.write(f"You are {selected_answer}!")
+        st.write(f"Domanda {i + 1}: {question['question']}")
+        # aggiungiamo un menu a tendina per le opzioni
+        answer = st.selectbox("Scegli una risposta:", question["options"])
+        # aggiungiamo la risposta alla lista delle risposte
+        answers.append(answer)
+        st.write(" ")
+
+    # calcoliamo il risultato in base alle risposte date
+    result = calculate_result(answers)
+
+    # mostriamo il risultato all'utente
+    st.write(f"Sei... {result}!")
+    st.write(" ")
+
+if __name__ == "__main__":
+    main()
     
 
 with st.sidebar:
@@ -81,6 +88,3 @@ with st.sidebar:
         st.title("Lets start the test!!! :boy: :girl:")
         
    
-
-# Run the quiz
-run_quiz()
