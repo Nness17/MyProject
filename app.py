@@ -3,13 +3,12 @@ import streamlit as st
 # Define the questions for the quiz
 questions = [
     {
-        'question': 'What is your favorite color?',
+        'question': 'Which is your favourite weapon?',
         'answers': {
-            'Red': 'Iron Man',
-            'Blue': 'Captain America',
-            'Green': 'Hulk',
-            'Yellow': 'Thor',
-            'Purple': 'Black Widow'
+            'A fire sword': 'Iron Man',
+            'An hammer with lightnings': 'Captain America',
+            'A magic bow': 'Hulk',
+            'A machine-gun':,
         }
     },
     {
