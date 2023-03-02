@@ -1,15 +1,23 @@
 import streamlit as st
 
-questions = [
-    "Do you like listening to music?",
-    "Do you like doing sports?",
-    "Do you like reading?",
-    "Do you like playing videogames?",
-    "Do you like listening to music?",
-]
+def quiz():
+    st.title("Which hero are you?")
+    st.write("Answer to the following questions to discover it!")
+
+    # Qu1
+    st.header("Question 1")
+    q1 = st.radio("Which weapon do you prefer?", ("Bow", "Sword", "Hammer", "Gun"))
+    
+    # Qu2
+    st.header("Question 2")
+    q2 = st.radio("Which is your favourite superpower?", ("Unlimited Power", "Flying", "Invisibility", "Telecinesis"))
+
+    # Qu3
+    st.header("Question 3")
+    q3 = st.radio("Which battle animal do you prefer?", ("A lion with 3 heads", "A super bird that throws fireballs", "An immortal bear with his super shield", "A giant snake that kills whoever he bites"))
 
 with st.sidebar:
-    st.title("Welcome to the 'What hero are you' test! :smile:")
+    st.title("Welcome to the 'Which hero are you' test! :smile:")
     age = st.slider ('Hi!, How old are you?',
     0, 100)
     if st.button('SUBMIT'):
