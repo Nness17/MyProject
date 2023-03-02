@@ -43,44 +43,21 @@ with st.sidebar:
         st.write('So you are a ', gender, 'ok!')
         st.title("Lets start the test!!! :boy: :girl:")
         
-def show_questions():
-    answers = []
-    
-    for question in questions:
-        answer = st.radio(question, ("Sì", "No"))
-        if question == 4:
-            if answer == "Yes":
-                st.text("What kind of music do you like?")
-                song = st.radio(("Rap", "Hip-Hop", "Classic", "Rock"))
-                if song == "Rap":
-                    st.video("https://www.youtube.com/results?search_query=veleno+7")
-        answers.append(answer)
-    return answers
-
-def calculate_result(answers):
-    score = 0
-    
-    for answer in answers:
-        if answer == "Sì":
-            score += 1
-    
-    if score <= 3:
-        return "Sei una persona timida, ma gentile e dolce."
-    elif score <= 7:
-        return "Sei una persona estroversa e socievole."
+    result = ""
+    if q1 == "Arco" and q2 == "Invisibilità" and q3 == "Falco":
+        result = "sei l'eroe Freccia Verde!"
+    elif q1 == "Spada" and q2 == "Forza sovrumana" and q3 == "Leone":
+        result = "sei l'eroe Spada di Fuoco!"
+    elif q1 == "Martello" and q2 == "Telecinesi" and q3 == "Orso":
+        result = "sei l'eroe Martello Telecinetico!"
+    elif q1 == "Pistola" and q2 == "Volare" and q3 == "Serpente":
+        result = "sei l'eroe Pistola Alata!"
     else:
-        return "Sei una persona ambiziosa e determinata."
-    
-def main():
-    st.title("What kind of hero are you?")
-    st.write("Answer to the questions and discover which hero are you!")
-    
-    answers = show_questions()
-    
-    if st.button("Lemme see which hero am I!"):
-        result = calculate_result(answers)
-        st.write("And you areee: ", result)
-        st.balloons()
-    
-if __name__ == "__main__":
-    main()
+        result = "mi dispiace, non riesco a identificare quale eroe sei."
+
+    # Visualizzazione del risultato
+    st.header("Risultato")
+    st.write(result)
+
+quiz()
+
