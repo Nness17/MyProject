@@ -56,7 +56,7 @@ def main():
     for i, question in enumerate(questions):
         st.write(f"{question['question']}")
         # aggiungiamo un menu a tendina per le opzioni
-        answer = st.selectbox("Scegli una risposta:", question["options"])
+        answer = st.selectbox("Select an option:", question["options"])
         # aggiungiamo la risposta alla lista delle risposte
         answers.append(answer)
         st.write(" ")
@@ -66,7 +66,7 @@ def main():
 
     # mostriamo il risultato all'utente
     if result:
-        st.write(f"Sei... {result}!")
+        st.write(f"And you aree... {result}!")
         st.write(" ")
         st.image(image_url, caption=result, use_column_width=True)
     else:
