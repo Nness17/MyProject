@@ -15,7 +15,24 @@ def quiz():
     # Qu3
     st.header("Question 3")
     q3 = st.radio("Which battle animal do you prefer?", ("A lion with 3 heads", "A super bird that throws fireballs", "An immortal bear with his super shield", "A giant snake that kills whoever he bites"))
+ 
+    result = ""
+    if q1 == "Arco" and q2 == "Invisibilità" and q3 == "Falco":
+        result = "sei l'eroe Freccia Verde!"
+    elif q1 == "Spada" and q2 == "Forza sovrumana" and q3 == "Leone":
+        result = "sei l'eroe Spada di Fuoco!"
+    elif q1 == "Martello" and q2 == "Telecinesi" and q3 == "Orso":
+        result = "sei l'eroe Martello Telecinetico!"
+    elif q1 == "Pistola" and q2 == "Volare" and q3 == "Serpente":
+        result = "sei l'eroe Pistola Alata!"
+    else:
+        result = "mi dispiace, non riesco a identificare quale eroe sei."
 
+    # Visualizzazione del risultato
+    st.header("Risultato")
+    st.write(result)
+    quiz()
+    
 with st.sidebar:
     st.title("Welcome to the 'Which hero are you' test! :smile:")
     age = st.slider ('Hi!, How old are you?',
@@ -43,21 +60,6 @@ with st.sidebar:
         st.write('So you are a ', gender, 'ok!')
         st.title("Lets start the test!!! :boy: :girl:")
         
-    result = ""
-    if q1 == "Arco" and q2 == "Invisibilità" and q3 == "Falco":
-        result = "sei l'eroe Freccia Verde!"
-    elif q1 == "Spada" and q2 == "Forza sovrumana" and q3 == "Leone":
-        result = "sei l'eroe Spada di Fuoco!"
-    elif q1 == "Martello" and q2 == "Telecinesi" and q3 == "Orso":
-        result = "sei l'eroe Martello Telecinetico!"
-    elif q1 == "Pistola" and q2 == "Volare" and q3 == "Serpente":
-        result = "sei l'eroe Pistola Alata!"
-    else:
-        result = "mi dispiace, non riesco a identificare quale eroe sei."
+   
 
-    # Visualizzazione del risultato
-    st.header("Risultato")
-    st.write(result)
-
-quiz()
 
