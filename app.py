@@ -3,22 +3,22 @@ import streamlit as st
 # definiamo una lista di domande e risposte
 questions = [
     {
-        "question": "Qual è il tuo colore preferito?",
-        "options": ["Rosso", "Blu", "Verde", "Giallo"]
+        "question": "Select your favourite battle guard",
+        "options": ["A dragon with 3 heads", "A giant bird that throws fireballs", "An ice guardian", "A giant immortal bear with his unbrokeable shield"]
     },
     {
-        "question": "Qual è la tua arma preferita?",
-        "options": ["Spada", "Arco e Frecce", "Martello", "Lancia"]
+        "question": "Which is your favourite weapon?",
+        "options": ["A fire sword", "A magic bow that throws 3 arrows", "A hammer with lightnings", "A machine-gun"]
     },
     {
-        "question": "Qual è il tuo superpotere preferito?",
-        "options": ["Superforza", "Volo", "Invisibilità", "Teletrasporto"]
+        "question": "Which is your favourite superpower?",
+        "options": ["Ssper strenght", "Flight", "Invisibility", "Teleporting"]
     }
 ]
 
 # definiamo una lista di possibili eroi e i loro risultati associati
 heroes = {
-    "Batman": {
+    "Giant ": {
         "criteria": ["Blu", "Martello", "Invisibilità"],
         "image": "https://example.com/batman.jpg"
     },
