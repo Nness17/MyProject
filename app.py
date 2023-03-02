@@ -12,7 +12,7 @@ questions = [
     },
     {
         "question": "Which is your favourite superpower?",
-        "options": ["Ssper strenght", "Flight", "Invisibility", "Teleporting"]
+        "options": ["Super strenght", "Flight", "Invisibility", "Teleporting"]
     },
     {
         "question": "Where do you want to be?",
@@ -23,19 +23,19 @@ questions = [
 # definiamo una lista di possibili eroi e i loro risultati associati
 heroes = {
     "Giant ": {
-        "criteria": ["Blu", "Martello", "Invisibilità"],
+        "criteria": ["A dragon with 3 heads", "A fire sword", "Super strenght"],
         "image": "https://example.com/batman.jpg"
     },
     "Superman": {
-        "criteria": ["Rosso", "Volo", "Superforza"],
+        "criteria": ["A dragon with 3 heads", "A magic bow that throws 3 arrows", "Super strenght"],
         "image": "https://example.com/superman.jpg"
     },
     "Wonder Woman": {
-        "criteria": ["Rosso", "Lancia", "Superforza"],
+        "criteria": ["A dragon with 3 heads", "A hammer with lightnings", "Super strenght"],
         "image": "https://example.com/wonder-woman.jpg"
     },
     "Flash": {
-        "criteria": ["Giallo", "Nessuna", "Velocezza"],
+        "criteria": ["A dragon with 3 heads", "A machine-gun", "Super strenght"],
         "image": "https://example.com/flash.jpg"
     }
 }
@@ -81,32 +81,30 @@ if __name__ == "__main__":
     
 
 with st.sidebar:
-    with st.container:
-        st.title("Welcome to the 'Which hero are you' test! :smile:")
-        age = st.slider ('Hi!, How old are you?',
-        0, 100)
-        if st.button('SUBMIT'):
-            if age >=90 or age<=9:
-                st.write('Are you sure that this is your age? :bust_in_silhouette:')
-                if st.button('You do not believe me? :eyes:'):
-                    st.write('OkOk I believe you, keep calm I still love you :kiss: ')
-                    st.write('Welcome! I am glad to know that you are ', age, 'years old! :sunglasses:')
-            else:
+    st.title("Welcome to the 'Which hero are you' test! :smile:")
+    age = st.slider ('Hi!, How old are you?',
+    0, 100)
+    if st.button('SUBMIT'):
+        if age >=90 or age<=9:
+            st.write('Are you sure that this is your age? :bust_in_silhouette:')
+            if st.button('You do not believe me? :eyes:'):
+                st.write('OkOk I believe you, keep calm I still love you :kiss: ')
                 st.write('Welcome! I am glad to know that you are ', age, 'years old! :sunglasses:')
+        else:
+            st.write('Welcome! I am glad to know that you are ', age, 'years old! :sunglasses:')
             
             
 with st.sidebar:
-    with st.container:
-        gender = st.radio("What is your gender?", ('Male', 'Female', 'Other', 'I do not want to specificate'))
-        if gender == 'Other':
-            other = st.text_input('Write here in what you identify! I will always accept you whatever you are :kiss:')
-            st.write('I am glad to know that you identify as: ', other)
-            st.title("Lets start the test!!! :boy: :girl:")
-        elif gender == 'I do not want to specificate':
-            st.write('Do not worry! I will understand!')
-            st.title("Lets start the test!!! :boy: :girl:")
-        else:
-            st.write('So you are a ', gender, 'ok!')
-            st.title("Lets start the test!!! :boy: :girl:")
+    gender = st.radio("What is your gender?", ('Male', 'Female', 'Other', 'I do not want to specificate'))
+    if gender == 'Other':
+        other = st.text_input('Write here in what you identify! I will always accept you whatever you are :kiss:')
+        st.write('I am glad to know that you identify as: ', other)
+        st.title("Lets start the test!!! :boy: :girl:")
+    elif gender == 'I do not want to specificate':
+        st.write('Do not worry! I will understand!')
+        st.title("Lets start the test!!! :boy: :girl:")
+    else:
+        st.write('So you are a ', gender, 'ok!')
+        st.title("Lets start the test!!! :boy: :girl:")
         
    
