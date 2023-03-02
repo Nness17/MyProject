@@ -22,22 +22,37 @@ questions = [
 
 # definiamo una lista di possibili eroi e i loro risultati associati
 heroes = {
-    "Giant ": {
-        "criteria": ["A dragon with 3 heads", "A fire sword", "Super strenght"],
+    "The super knight of magma": {
+        "criteria": ["A dragon with 3 heads", "A fire sword", "Super strenght", "In the magic reign of magma"],
         "image": "https://example.com/batman.jpg"
     },
-    "Superman": {
-        "criteria": ["A dragon with 3 heads", "A magic bow that throws 3 arrows", "Super strenght"],
+    "The super archer of magma": {
+        "criteria": ["A dragon with 3 heads", "A magic bow that throws 3 arrows", "Super strenght", "In the magic reign of magma"],
         "image": "https://example.com/superman.jpg"
     },
-    "Wonder Woman": {
-        "criteria": ["A dragon with 3 heads", "A hammer with lightnings", "Super strenght"],
+    "The super paladin of magma ": {
+        "criteria": ["A dragon with 3 heads", "A hammer with lightnings", "Super strenght", "In the magic reign of magma"],
         "image": "https://example.com/wonder-woman.jpg"
     },
-    "Flash": {
-        "criteria": ["A dragon with 3 heads", "A machine-gun", "Super strenght"],
+    "The super gunslinger of magma": {
+        "criteria": ["A dragon with 3 heads", "A machine-gun", "Super strenght", "In the magic reign of magma"],
         "image": "https://example.com/flash.jpg"
-    }
+    },
+    "The super knight of magma": {
+        "criteria": ["A dragon with 3 heads", "A fire sword", "Super strenght", "In the magic reign of magma"],
+        "image": "https://example.com/batman.jpg"
+    },
+    "The super archer of magma": {
+        "criteria": ["A dragon with 3 heads", "A magic bow that throws 3 arrows", "Super strenght", "In the magic reign of magma"],
+        "image": "https://example.com/superman.jpg"
+    },
+    "The super paladin of magma ": {
+        "criteria": ["A dragon with 3 heads", "A hammer with lightnings", "Super strenght", "In the magic reign of magma"],
+        "image": "https://example.com/wonder-woman.jpg"
+    },
+    "The super gunslinger of magma": {
+        "criteria": ["A dragon with 3 heads", "A machine-gun", "Super strenght", "In the magic reign of magma"],
+        "image": "https://example.com/flash.jpg"
 }
 
 # definiamo la funzione per calcolare il risultato in base alle risposte date
