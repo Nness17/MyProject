@@ -79,14 +79,16 @@ def main():
         # aggiungiamo la risposta alla lista delle risposte
         answers.append(answer)
         st.write(" ")
-        st.button("DO NOT CLICK HERE!"):
-            if result:
-                st.write(f"And you aree... {result}!")
-                st.write(" ")
-                st.image(image_url, caption=result, use_column_width=True)
-            else:
-                st.write("Nessun eroe corrisponde alle tue risposte.")
-                  
+        
+        
+    st.button('DO NOT CLICK HERE!'):
+        if result:
+            st.write(f"And you aree... {result}!")
+            st.write(" ")
+            st.image(image_url, caption=result, use_column_width=True)
+        else:
+            st.write("Nessun eroe corrisponde alle tue risposte.")
+                
     # calcoliamo il risultato in base alle risposte date
     result, image_url = calculate_result(answers)
 
