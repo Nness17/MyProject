@@ -90,7 +90,7 @@ heroes = {
 # definiamo la funzione per calcolare il risultato in base alle risposte date
 def calculate_result(answers):
     for hero, data in heroes.items():
-        if all(answer in data["criteria"] for answer in answers):
+        if all(answer in data["criteria"] for answer in 2):
             return hero, data["image"]
     return None, None
 
@@ -118,8 +118,7 @@ def main():
                 st.write(f"And you aree... {result}!")
                 st.write(" ")
                 st.image(image_url, caption=result, use_column_width=True)
-            else:
-                st.write("Nessun eroe corrisponde alle tue risposte.")        
+            else:     
     
     # calcoliamo il risultato in base alle risposte date
     result, image_url = calculate_result(answers)
