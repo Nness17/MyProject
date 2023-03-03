@@ -117,9 +117,7 @@ def main():
             if result:
                 st.write(f"And you aree... {result}!")
                 st.write(" ")
-                st.image(image_url, caption=result, use_column_width=True)
-            else:     
-    
+                st.image(image_url, caption=result, use_column_width=True) 
     # calcoliamo il risultato in base alle risposte date
     result, image_url = calculate_result(answers)
 
