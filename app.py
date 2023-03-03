@@ -90,7 +90,7 @@ heroes = {
 # definiamo la funzione per calcolare il risultato in base alle risposte date
 def calculate_result(answers):
     for hero, data in heroes.items():
-        if all(answer in data["criteria"] for answer in 2):
+        if all(answer in data["criteria"] for answer in answer):
             return hero, data["image"]
     return None, None
 
