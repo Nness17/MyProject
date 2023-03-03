@@ -119,8 +119,8 @@ def main():
                 st.write(" ")
                 st.image(image_url, caption=result, use_column_width=True)                
 
-if __name__ == "__main__":
-    main()
+    if __name__ == "__main__":
+        main()
     
 
 with st.sidebar:
@@ -149,7 +149,5 @@ with st.sidebar:
     else:
         st.write('So you are a ', gender, 'ok!')
         st.title("Lets start the test!!! :boy: :girl:")
-        
-#mostra risultato 
 
             
