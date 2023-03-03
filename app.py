@@ -108,9 +108,11 @@ def main():
         st.write(f"{question['question']}")
         # aggiungiamo un menu a tendina per le opzioni
         answer = st.selectbox("Select an option:", question["options"])
+        
         # aggiungiamo la risposta alla lista delle risposte
-        answers.append(answer)
-        st.write(" ")
+        if question == 1 or question == 3:
+            answers.append(answer)
+            st.write(" ")
         
     result, image_url = calculate_result(answers)
     if st.button('Submit your answers'):
