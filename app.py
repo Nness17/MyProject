@@ -150,4 +150,4 @@ with st.sidebar:
         st.write('So you are a ', gender, 'ok!')
         st.title("Lets start the test!!! :boy: :girl:")
 
-            
+#mostra tutto tranne che le domande            
