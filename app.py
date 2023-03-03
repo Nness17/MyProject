@@ -79,7 +79,7 @@ def main():
         # aggiungiamo la risposta alla lista delle risposte
         answers.append(answer)
         st.write(" ")
-        st.button("DO NOT CLICK HERE!):
+        st.button("DO NOT CLICK HERE!"):
             if result:
                 st.write(f"And you aree... {result}!")
                 st.write(" ")
