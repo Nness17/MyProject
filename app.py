@@ -53,8 +53,8 @@ heroes = {
     "The super gunslinger of magma": {
         "criteria": ["A dragon with 3 heads", "A machine-gun", "Super strenght", "In the magic reign of magma"],
         "image": "https://example.com/flash.jpg"
+    }
 }
-
 # definiamo la funzione per calcolare il risultato in base alle risposte date
 def calculate_result(answers):
     for hero, data in heroes.items():
