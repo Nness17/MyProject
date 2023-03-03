@@ -108,9 +108,7 @@ def main():
         st.write(f"{question['question']}")
         # aggiungiamo un menu a tendina per le opzioni
         answer = st.selectbox("Select an option:", question["options"])
-        
-        # aggiungiamo la risposta alla lista delle risposte
-        if question == 1 or question == 3:
+        if i == 1 or i == 3:
             answers.append(answer)
             st.write(" ")
         
