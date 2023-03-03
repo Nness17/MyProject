@@ -81,14 +81,7 @@ def main():
         st.write(" ")
         
         
-    if st.button('Submit your answers'):
-        if result:
-            st.write(f"And you aree... {result}!")
-            st.write(" ")
-            st.image(image_url, caption=result, use_column_width=True)
-        else:
-            st.write("Nessun eroe corrisponde alle tue risposte.")
-            
+    
     # calcoliamo il risultato in base alle risposte date
     result, image_url = calculate_result(answers)
 
@@ -131,4 +124,12 @@ with st.sidebar:
         st.write('So you are a ', gender, 'ok!')
         st.title("Lets start the test!!! :boy: :girl:")
         
-   
+#mostra risultato 
+if st.button('Submit your answers'):
+        if result:
+            st.write(f"And you aree... {result}!")
+            st.write(" ")
+            st.image(image_url, caption=result, use_column_width=True)
+        else:
+            st.write("Nessun eroe corrisponde alle tue risposte.")
+            
